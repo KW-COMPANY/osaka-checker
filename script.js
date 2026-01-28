@@ -1,24 +1,24 @@
  /********************* * 画像URL定義 *********************/ 
 const LEVEL_IMAGES = {
   male: {
-    1: "male_1.png",
-    2: "male_2.png",
-    3: "male_3.png",
-    4: "male_4.png",
-    5: "male_5.png",
-    6: "male_6.png",
-    7: "male_7.png",
-    8: "male_8.png"
+    1: "images/male_1.png",
+    2: "images/male_2.png",
+    3: "images/male_3.png",
+    4: "images/male_4.png",
+    5: "images/male_5.png",
+    6: "images/male_6.png",
+    7: "images/male_7.png",
+    8: "images/male_8.png"
   },
   female: {
-    1: "female_1.png",
-    2: "female_2.png",
-    3: "female_3.png",
-    4: "female_4.png",
-    5: "female_5.png",
-    6: "female_6.png",
-    7: "female_7.png",
-    8: "female_8.png"
+    1: "images/female_1.png",
+    2: "images/female_2.png",
+    3: "images/female_3.png",
+    4: "images/female_4.png",
+    5: "images/female_5.png",
+    6: "images/female_6.png",
+    7: "images/female_7.png",
+    8: "images/female_8.png"
   }
 };
 
@@ -226,4 +226,5 @@ restartBtn.addEventListener("click", ()=>{
   location.reload();
 });
  downloadBtn.addEventListener("click", ()=>{ const link = document.createElement("a"); link.href = resultImage.src; link.download = `osaka_level${levelFromPct(state.totalPct).level}.jpg`;
+
  link.click(); });
