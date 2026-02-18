@@ -210,4 +210,3 @@ restartBtn.addEventListener("click", ()=>{
  downloadBtn.addEventListener("click", ()=>{ const link = document.createElement("a"); link.href = resultImage.src; link.download = `osaka_level${levelFromPct(state.totalPct).level}.jpg`;
 
  link.click(); });
-
