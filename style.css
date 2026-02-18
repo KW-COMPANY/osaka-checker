@@ -54,8 +54,8 @@ header{ padding: 26px 16px 8px; text-align:center; } .badge{ display:inline-flex
 }
  .section-title{ margin:0 0 8px; font-size: 15px; font-weight: 900; letter-spacing:.03em; } .notice{ font-size: 13px; line-height:1.5; background: rgba(0,0,0,.06); padding: 12px; border-radius: 12px; border: 1px dashed rgba(0,0,0,.18); font-weight: 700; } .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; } @media (max-width:560px){ .grid2{ grid-template-columns: 1fr; } } 
 .choice{
-  background: rgba(255,255,255,0.35);  /* 半透明に */
-  backdrop-filter: blur(6px);          /* 背景を少しぼかす */
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(6px);
   box-shadow: 0 8px 20px rgba(0,0,0,.08);
   transition: transform .15s ease, box-shadow .2s ease;
 } 
@@ -103,3 +103,4 @@ button:focus-visible, input:focus-visible{
   0%{background-position:0 0;}
   100%{background-position:200% 0;}
 }
+
