@@ -113,5 +113,9 @@ button:focus-visible, input:focus-visible{
   0%{background-position:0 0;}
   100%{background-position:200% 0;}
 }
-
-
+#genderMale.choice {
+  background: linear-gradient(135deg, #4da6ff, #00ffd5);
+}
+#genderFemale.choice {
+  background: linear-gradient(135deg, #ff6ec7, #ffbb33);
+}
