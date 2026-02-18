@@ -167,7 +167,16 @@ async function handlePhoto(file, where){
 photoInput.addEventListener("change", (e) => handlePhoto(e.target.files?.[0], 1));
 photoInput2.addEventListener("change", (e) => handlePhoto(e.target.files?.[0], 2));
 
- function finish(){ state.totalPctNoPhoto = calcPct(false); state.totalPct = calcPct(true); show(screenR); renderResult(); } function renderResult(){ const p = state.totalPct; resultPct.textContent = `${p}%`; resultComment.textContent = commentFromPct(p); const lv = levelFromPct(p);
+ function finish(){ state.totalPctNoPhoto = calcPct(false); state.totalPct = calcPct(true); show(screenR); 
+ renderResult(); } function renderResult(){ const p = state.totalPct;
+let start = 0;
+const target = state.totalPct;
+const interval = setInterval(()=>{
+  if(start >= target){ clearInterval(interval); resultPct.textContent = `${target}%`; return; }
+  resultPct.textContent = `${start}%`;
+  start++;
+}, 12);  
+ resultPct.textContent = `${p}%`; resultComment.textContent = commentFromPct(p); const lv = levelFromPct(p);
  stageBadge.textContent = lv.name;
 
 const imageUrl = LEVEL_IMAGES[state.gender][lv.level];
@@ -201,3 +210,4 @@ restartBtn.addEventListener("click", ()=>{
  downloadBtn.addEventListener("click", ()=>{ const link = document.createElement("a"); link.href = resultImage.src; link.download = `osaka_level${levelFromPct(state.totalPct).level}.jpg`;
 
  link.click(); });
+
