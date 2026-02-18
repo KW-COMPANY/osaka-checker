@@ -87,13 +87,19 @@ header{ padding: 26px 16px 8px; text-align:center; } .badge{ display:inline-flex
 button:focus-visible, input:focus-visible{
     outline: 2px solid #000; /* or var(--ink) */
     box-shadow: var(--focus);
-
 }
-
-
-
-
-
-
-
-
+.avatarStage{
+  border-radius: 16px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  border:2px solid rgba(255,255,255,.1);
+}
+.stageBadge{
+  background: linear-gradient(135deg, #ff3b3b, #ffec4d);
+  animation: shine 3s linear infinite;
+  color:#fff;
+}
+@keyframes shine{
+  0%{background-position:0 0;}
+  100%{background-position:200% 0;}
+}
