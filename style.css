@@ -1,10 +1,10 @@
 :root{
- --bg1:#ffec4d;
- --bg2:#ff3b3b;
- --bg3:#1bd0ff;
- --ink:#151515;
- --card:#ffffffee;
- --shadow: 0 12px 30px rgba(0,0,0,.22);
+ --bg1:#ff90e8;
+ --bg2:#7ef0ff;
+ --bg3:#ffd77e;
+ --ink:#1a1a1a;
+ --card:#ffffffdd;
+ --shadow:0 14px 40px rgba(0,0,0,.22);
  --radius: 18px;
  --focus: 0 0 0 4px rgba(0,0,0,.15);
  }
@@ -35,3 +35,4 @@ button:focus-visible, input:focus-visible{
     box-shadow: var(--focus);
 
 }
+
