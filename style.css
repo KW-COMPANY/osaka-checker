@@ -21,7 +21,18 @@ h1,h2,h3{
   font-weight: 900;
   letter-spacing: 0.02em;
 }
-.sparkles{ position:fixed; inset:0; pointer-events:none; background-image: radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px), radial-gradient(circle, rgba(255,255,255,.75) 0 1px, transparent 2px), radial-gradient(circle, rgba(255,255,255,.6) 0 1px, transparent 2px); background-size: 180px 180px, 120px 120px, 90px 90px; background-position: 0 0, 40px 70px, 20px 40px; mix-blend-mode: overlay; opacity:.55; filter: blur(.2px); animation: twinkle 6s linear infinite; } 
+.sparkles{
+  position:fixed; 
+  inset:0; 
+  pointer-events:none; 
+  background-image: radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px), radial-gradient(circle, rgba(255,255,255,.75) 0 1px, transparent 2px), radial-gradient(circle, rgba(255,255,255,.6) 0 1px, transparent 2px); 
+  background-size: 180px 180px, 120px 120px, 90px 90px; 
+  background-position: 0 0, 40px 70px, 20px 40px; 
+  mix-blend-mode: overlay; 
+  opacity:0.65;
+  filter: blur(0.4px);
+  animation: twinkle 6s linear infinite; 
+}
 @keyframes twinkle{
   0%{transform:translate3d(0,0,0);}
   25%{transform:translate3d(-8px,5px,0);}
@@ -78,6 +89,7 @@ button:focus-visible, input:focus-visible{
     box-shadow: var(--focus);
 
 }
+
 
 
 
