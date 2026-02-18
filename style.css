@@ -12,7 +12,7 @@
  body{
   margin:0; 
   font-family: 'Inter', sans-serif;
-  color:var(--ink); 
+  color:#222233; 
   background: radial-gradient(circle at 10% 10%, rgba(255,255,255,.45), transparent 40%), radial-gradient(circle at 90% 20%, rgba(255,255,255,.35), transparent 42%), linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3)); 
   min-height:100vh; 
   overflow-x:hidden; 
@@ -119,3 +119,4 @@ button:focus-visible, input:focus-visible{
 #genderFemale.choice {
   background: linear-gradient(135deg, #ff6ec7, #ffbb33);
 }
+
