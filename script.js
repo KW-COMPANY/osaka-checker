@@ -1,4 +1,3 @@
- /********************* * 画像URL定義 *********************/ 
 const LEVEL_IMAGES = {
   male: {
     1: "images/male_1.png",
@@ -22,9 +21,6 @@ const LEVEL_IMAGES = {
   }
 };
 
- /*********************
- * 定数
- *********************/
  const GENRES = [ 
 {key:"food", name:"食文化", c1:"#ff7a00", c2:"#ffbf00"}, {key:"comm", name:"コミュ力", c1:"#00a7ff", c2:"#00ffd5"}, {key:"money", name:"金銭感覚", c1:"#00b26f", c2:"#aaff00"}, {key:"local", name:"地域愛", c1:"#8b5cff", c2:"#ff4dd2"}, {key:"fashion",name:"ファッション", c1:"#ff00a8", c2:"#ffbf00"},
  {key:"action", name:"性格行動", c1:"#ffbf00", c2:"#ff3b3b"}
@@ -39,16 +35,12 @@ const QUESTIONS = [
  {genre:"money", weight:1.0, text:"セール情報に反応速い？(LINE通知で走る)"}, {genre:"comm", weight:1.0, text:"初対面でも距離詰めるん早い言われる？(もう友達)"}, {genre:"action", weight:1.1, text:"声デカい言われる？普通に喋ってるだけやのに？"}, {genre:"action", weight:1.0, text:"困ってる人見たら、つい世話焼いてまう？(おせっかい最高)"},
  {genre:"local", weight:1.1, text:'東京の人、ちょっと"かしこそう"で緊張する？(こわい言うたら怒る？)'}
  ]; 
-// レベル帯
+
  const LEVELS = [ {name:"LEVEL 1：初級", min:0, max:12, level: 1}, {name:"LEVEL 2：入門", min:13, max:25, level: 2}, {name:"LEVEL 3：普通", min:26, max:38, level: 3}, {name:"LEVEL 4：中級", min:39, max:50, level: 4}, {name:"LEVEL 5：上級", min:51, max:63, level: 5}, {name:"LEVEL 6：熟練", min:64, max:75, level: 6}, {name:"LEVEL 7：達人", min:76, max:88, level: 7}, {name:"LEVEL 8：極み", min:89, max:100, level: 8} ];
- /*********************
- * 状態
- *********************/
+
  const state = { 
 gender: null, qIndex: 0, scores: {food:0, comm:0, money:0, local:0, fashion:0, action:0}, max: {food:0, comm:0, money:0, local:0, fashion:0, action:0}, photoEnabled: false, photoScore: 0, photoImage: null, totalPct: 0, totalPctNoPhoto: 0, genrePct: {}, };
- /*********************
- * DOM
- *********************/
+
  const el = (id)=>document.getElementById(id);
  const screenTop = el("screenTop");
 const screenQ = el("screenQ");
@@ -57,20 +49,12 @@ const screenR = el("screenR");
  const startBtn = el("startBtn"); const genderMale = el("genderMale"); const genderFemale = el("genderFemale"); const qTitle = el("qTitle"); const qMeta = el("qMeta"); const choices = el("choices"); const qIndexEl = el("qIndex"); const qTotalEl = el("qTotal"); const barFill = el("barFill"); const moodEl = el("mood"); const livePct = el("livePct"); const livePhoto = el("livePhoto"); const resultPct = el("resultPct"); const resultComment = el("resultComment"); const breakdown = el("breakdown"); const shareBtn = el("shareBtn"); const restartBtn = el("restartBtn"); const downloadBtn = el("downloadBtn"); const stageBadge = el("stageBadge"); const photoInput = el("photoInput"); const photoInput2 = el("photoInput2"); const thumb = el("thumb"); const thumb2 = el("thumb2"); const photoScoreVal = el("photoScoreVal"); const photoModeVal = el("photoModeVal");
  const resultImage = el("resultImage");
 
-/*********************
- * 初期：最大値計算
- *********************/
 function initMax(){
  
 for(const q of QUESTIONS){ state.max[q.genre] += 4 * q.weight; }
  }
 initMax();
 qTotalEl.textContent = QUESTIONS.length;
-
-/*********************
- * UI
- *********************/
-
 
 function show(screen){
   [screenTop, screenQ, screenR].forEach(s =>
@@ -92,7 +76,6 @@ b.appendChild(small);
  b.addEventListener("click", ()=>applyAnswer(opt.value)); choices.appendChild(b); }); const p = calcPct(false); moodEl.textContent = moodFromPct(p); livePct.textContent = `${p}%`; livePhoto.textContent = state.photoEnabled ? "ON" : "OFF"; } function applyAnswer(value){ const q = QUESTIONS[state.qIndex]; state.scores[q.genre] += value * q.weight; state.qIndex++; const p = calcPct(false); livePct.textContent = `${p}%`; moodEl.textContent = moodFromPct(p); if(state.qIndex >= QUESTIONS.length){ finish(); }else{ renderQuestion(); } } /********************* * スコア計算 *********************/ const clamp = (n,a,b)=>Math.max(a,Math.min(b,n)); function calcGenrePct(){ const out = {}; for(const g of GENRES){ const max = state.max[g.key] || 1; out[g.key] = Math.round((state.scores[g.key] / max) * 100); } state.genrePct = out; return out; } function calcPct(includePhoto){ const gp = calcGenrePct(); const avg = Math.round((gp.food + gp.comm + gp.money + gp.local + gp.fashion + gp.action)/6); if(includePhoto && state.photoEnabled){ return clamp(Math.round(avg*0.80 + state.photoScore*0.20), 0, 100); } return clamp(avg, 0, 100); } function levelFromPct(p){ return LEVELS.find(l=>p>=l.min && p<=l.max) || LEVELS[LEVELS.length-1]; } function commentFromPct(p){ if(p<=12) return "あんた…大阪の風は感じるけど、まだ\"静かなUSJ\"やな。ツッコミ温存してるやろ？";
  if(p<=25) return "そこそこ大阪っぽいで。大阪城見てええ石垣やな言うタイプや。"; if(p<=38) return "新世界の匂いしてきた。串カツ一本で人生語り始める気配あるで。"; if(p<=50) return "道頓堀のネオンが呼んでる。写真撮る時だけ声量2倍になるタイプや。"; if(p<=63) return "通天閣ゾーン突入や。ヒョウ柄が半径3m以内におる。"; if(p<=75) return "もはやNGK級や！あんたが歩いたら看板が点灯して拍手する！"; if(p<=88) return "コテコテ度達人や！豹柄とたこ焼きが似合いすぎてヤバい！"; return "極みや！あんたが大阪そのもの！通天閣がお辞儀する！"; }
 
- /********************* * 写真解析(ローカルのみ) *********************/
 async function handlePhoto(file, where){
   if(!file) return;
 
@@ -103,7 +86,6 @@ async function handlePhoto(file, where){
     state.photoEnabled = true;
     state.photoImage = img;
 
-    // キャンバスに縮小して描画
     const w = 256;
     const h = Math.round(img.height * (w / img.width));
     const canvas = document.createElement("canvas");
@@ -112,13 +94,11 @@ async function handlePhoto(file, where){
     const ctx = canvas.getContext("2d", { willReadFrequently: true });
     ctx.drawImage(img, 0, 0, w, h);
 
-    // 画像データ取得
     const data = ctx.getImageData(0, 0, w, h).data;
     const gray = new Uint8ClampedArray(w * h);
 
     let satSum = 0, brightSum = 0, brightSum2 = 0, edge = 0;
 
-    // 明るさ・彩度計算
     for (let i = 0, p = 0; i < data.length; i += 4, p++) {
       const r = data[i], g = data[i + 1], b = data[i + 2];
       const max = Math.max(r, g, b), min = Math.min(r, g, b);
@@ -131,7 +111,6 @@ async function handlePhoto(file, where){
       gray[p] = y;
     }
 
-    // エッジ検出 (Sobel)
     for (let y = 1; y < h - 1; y++) {
       for (let x = 1; x < w - 1; x++) {
         const i = y * w + x;
@@ -150,7 +129,6 @@ async function handlePhoto(file, where){
     const contrast = Math.sqrt(Math.max(0, varr)) / 128;
     const edgeScore = clamp((edge / ((w - 2) * (h - 2))) / 255 * 0.9, 0, 1);
 
-    // 下半分の平均で笑顔度を計算
     let bottomSum = 0, bottomCnt = 0;
     for (let y = Math.floor(h * 0.55); y < h; y++) {
       for (let x = 0; x < w; x++) {
@@ -160,17 +138,14 @@ async function handlePhoto(file, where){
     }
     const smileLike = clamp((bottomSum / bottomCnt - mean) / 60 + 0.5, 0, 1);
 
-    // vividRatio 計算
     let vivid = 0;
     for (let i = 0; i < data.length; i += 4) {
       if (Math.max(data[i], data[i + 1], data[i + 2]) > 210) vivid++;
     }
     const vividRatio = vivid / (data.length / 4);
 
-    // 総合スコア計算
     state.photoScore = Math.round(clamp(100 * (0.34 * satAvg + 0.18 * contrast + 0.22 * edgeScore + 0.16 * smileLike + 0.10 * vividRatio), 0, 100));
 
-    // UIに反映
     const imgEl = document.createElement("img");
     imgEl.src = url;
     if (where === 1) {
@@ -189,14 +164,12 @@ async function handlePhoto(file, where){
   img.src = url;
 }
 
-// イベントリスナーは1回ずつでOK
 photoInput.addEventListener("change", (e) => handlePhoto(e.target.files?.[0], 1));
 photoInput2.addEventListener("change", (e) => handlePhoto(e.target.files?.[0], 2));
 
- /********************* * 終了→結果描画 *********************/ function finish(){ state.totalPctNoPhoto = calcPct(false); state.totalPct = calcPct(true); show(screenR); renderResult(); } function renderResult(){ const p = state.totalPct; resultPct.textContent = `${p}%`; resultComment.textContent = commentFromPct(p); const lv = levelFromPct(p);
+ function finish(){ state.totalPctNoPhoto = calcPct(false); state.totalPct = calcPct(true); show(screenR); renderResult(); } function renderResult(){ const p = state.totalPct; resultPct.textContent = `${p}%`; resultComment.textContent = commentFromPct(p); const lv = levelFromPct(p);
  stageBadge.textContent = lv.name;
 
-// 画像表示
 const imageUrl = LEVEL_IMAGES[state.gender][lv.level];
 resultImage.src = imageUrl;
 resultImage.style.display = "block";
