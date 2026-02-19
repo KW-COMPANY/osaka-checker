@@ -12,7 +12,7 @@
  body{
   margin:0; 
   font-family: 'Inter', sans-serif;
-  color:#2e2e75; 
+  color:#4e4eb5; 
   background: radial-gradient(circle at 10% 10%, rgba(255,255,255,.45), transparent 40%), radial-gradient(circle at 90% 20%, rgba(255,255,255,.35), transparent 42%), linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3)); 
   min-height:100vh; 
   overflow-x:hidden; 
@@ -230,6 +230,7 @@ button:focus-visible, input:focus-visible{
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+
 
 
 
