@@ -115,7 +115,7 @@ main{ padding: 16px 16px 44px; display:flex; justify-content:center; } .wrap{
   width: 100%;
   text-align: center;
   border: none;
-  background: linear-gradient(135deg, #ed74be, #ebb54b);
+  background: linear-gradient(135deg, #69f591, #e0eb4b);
   border-radius: 24px;
   padding: 16px;
   font-weight: 900;
@@ -230,6 +230,7 @@ button:focus-visible, input:focus-visible{
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+
 
 
 
