@@ -47,7 +47,7 @@ h1 {
   font-weight: 900;
   font-size: clamp(32px, 6vw, 64px);
   text-align: center;
-  background: linear-gradient(90deg, #0077ff, #00ccff, #00ff77);
+  background: linear-gradient(90deg, #0077ff, #00ccff, #1aeb7b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.02em;
@@ -230,6 +230,7 @@ button:focus-visible, input:focus-visible{
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+
 
 
 
