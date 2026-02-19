@@ -226,9 +226,10 @@ button:focus-visible, input:focus-visible{
   background: linear-gradient(135deg, #ff6ec7, #ffbb33);
 }
 #rTitle {
-  color: #ff9900;
+  color: #39a5ed;
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+
 
 
