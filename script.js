@@ -93,7 +93,10 @@ function show(screen){
   genderFemale.style.borderColor = (g==="female") ? "rgba(255,0,168,.6)" : "rgba(0,0,0,.14)";
 
   startBtn.disabled = false;
-  startBtn.innerHTML = "ほな、測ったろか！<br class='sp-br'>スタート！";
+  startBtn.innerHTML = `
+  ほな、測ったろか！
+  <span class="sp-line strong">スタート！</span>
+`;
 
   startBtn.classList.add("active");
   startBtn.classList.add("attention");
