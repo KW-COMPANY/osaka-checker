@@ -242,3 +242,17 @@
     letter-spacing:-0.02em;
   }
 }
+
+.sp-line{
+  display:inline;
+}
+
+/* スマホだけ改行＆小さく */
+@media (max-width:480px){
+
+  .sp-line{
+    display:block;
+    font-size:0.9em;   /* 少し小さく */
+    margin-top:4px;
+  }
+}
