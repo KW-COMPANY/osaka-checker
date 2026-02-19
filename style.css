@@ -236,3 +236,9 @@
     display:block;
   }
 }
+@media (max-width:480px){
+  #homeTitle,
+  .startBtn{
+    letter-spacing:-0.02em;
+  }
+}
