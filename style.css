@@ -43,15 +43,16 @@ h1,h2,h3{
 }
 header{ padding: 26px 16px 8px; text-align:center; } 
 .badge {
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 700;
+  color: #2e6dd1;
+  text-align: center;
+  margin-bottom: 12px;
+  background: none;
   padding: 0;
   border-radius: 0;
-  background: none;
   box-shadow: none;
-  color: #2e6dd1;
-  font-weight: 900;
-  letter-spacing:.02em;
-  display: inline;
-} 
+}
 .badge small{ font-weight:800; opacity:.9; } 
 h1 {
   font-family: 'Baloo 2', cursive;
@@ -241,6 +242,7 @@ button:focus-visible, input:focus-visible{
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+
 
 
 
