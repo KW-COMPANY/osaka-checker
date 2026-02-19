@@ -181,7 +181,7 @@ overflow:hidden; background: #2e6dd1; min-height: 280px; position:relative; box-
 }
 
 #restartBtn{
-  background: linear-gradient(135deg, #ff69b4, #ffb347);
+  background: linear-gradient(135deg, #69f591, #e0eb4b);
   color: #fff;
   font-weight: 900;
   padding: 16px 24px;
@@ -265,4 +265,5 @@ button:focus-visible, input:focus-visible{
 #startBtn.attention {
   animation: pop 0.5s ease;
 }
+
 
