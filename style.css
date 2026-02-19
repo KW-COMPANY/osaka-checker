@@ -171,15 +171,13 @@ overflow:hidden; background: #2e6dd1; min-height: 280px; position:relative; box-
 } 
 #shareBtn:hover{
   transform: translateY(-3px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 20px rgba(10, 31, 68, 0.4);
   filter: brightness(1.1);
 }
-
 #shareBtn:active{
   transform: translateY(2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 6px 12px rgba(10, 31, 68, 0.3);
 }
-
 #restartBtn{
   background: linear-gradient(135deg, #69f591, #e0eb4b);
   color: #fff;
@@ -269,4 +267,5 @@ button {
     0 1px 2px rgba(0,0,0,0.3),
     0 0 1px rgba(0,0,0,0.25);
 }
+
 
