@@ -64,7 +64,25 @@ function show(screen){
   window.scrollTo({ top:0, behavior:"smooth" });
 }
 
- function setGender(g){ state.gender = g; genderMale.style.borderColor = (g==="male") ? "rgba(255,0,168,.6)" : "rgba(0,0,0,.14)"; genderFemale.style.borderColor = (g==="female") ? "rgba(255,0,168,.6)" : "rgba(0,0,0,.14)"; startBtn.disabled = false; startBtn.textContent = "ほな、測ったろか！スタート！"; } genderMale.addEventListener("click", ()=>setGender("male")); genderFemale.addEventListener("click", ()=>setGender("female")); startBtn.addEventListener("click", ()=>{ if(!state.gender) return; show(screenQ); renderQuestion(); }); function moodFromPct(p){ if(p<20) return "おとなしいなぁ"; if(p<40) return "ちょい大阪"; if(p<60) return "関西の香り"; if(p<80) return "だいぶコテコテ"; return "祭りや祭り"; } function renderQuestion(){ const i = state.qIndex; qIndexEl.textContent = String(i+1); barFill.style.width = `${Math.round((i/QUESTIONS.length)*100)}%`;
+ function setGender(g){
+  state.gender = g;
+
+  genderMale.style.borderColor = (g==="male") ? "rgba(255,0,168,.6)" : "rgba(0,0,0,.14)";
+  genderFemale.style.borderColor = (g==="female") ? "rgba(255,0,168,.6)" : "rgba(0,0,0,.14)";
+
+  startBtn.disabled = false;
+  startBtn.textContent = "ほな、測ったろか！スタート！";
+
+  startBtn.classList.add("active");
+  startBtn.classList.add("attention");
+
+  setTimeout(() => {
+    startBtn.classList.remove("attention");
+  }, 400);
+
+  startBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+genderMale.addEventListener("click", ()=>setGender("male")); genderFemale.addEventListener("click", ()=>setGender("female")); startBtn.addEventListener("click", ()=>{ if(!state.gender) return; show(screenQ); renderQuestion(); }); function moodFromPct(p){ if(p<20) return "おとなしいなぁ"; if(p<40) return "ちょい大阪"; if(p<60) return "関西の香り"; if(p<80) return "だいぶコテコテ"; return "祭りや祭り"; } function renderQuestion(){ const i = state.qIndex; qIndexEl.textContent = String(i+1); barFill.style.width = `${Math.round((i/QUESTIONS.length)*100)}%`;
  const q = QUESTIONS[i]; qTitle.textContent = q.text; qMeta.innerHTML = ""; const tag1 = document.createElement("span"); tag1.className = "tag hot"; tag1.textContent = `ジャンル：${GENRES.find(g=>g.key===q.genre).name}`;
  const tag2 = document.createElement("span"); tag2.className = "tag"; tag2.textContent = `偏見係数：${q.weight.toFixed(1)}`; qMeta.appendChild(tag1); qMeta.appendChild(tag2); choices.innerHTML = ""; OPTIONS.forEach(opt=>{ const b = document.createElement("button"); b.className = "choice"; b.textContent = opt.label;
 
@@ -210,3 +228,4 @@ restartBtn.addEventListener("click", ()=>{
  downloadBtn.addEventListener("click", ()=>{ const link = document.createElement("a"); link.href = resultImage.src; link.download = `osaka_level${levelFromPct(state.totalPct).level}.jpg`;
 
  link.click(); });
+
