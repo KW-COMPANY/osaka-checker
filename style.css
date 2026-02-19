@@ -243,7 +243,6 @@ button:focus-visible, input:focus-visible{
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
-
 #startBtn {
   background: #ccc;
   color: #666;
@@ -265,5 +264,24 @@ button:focus-visible, input:focus-visible{
 #startBtn.attention {
   animation: pop 0.5s ease;
 }
-
-
+#genderMale,
+#genderFemale {
+  color: #fff;
+  -webkit-text-stroke: 1.5px #b1006f;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+#startBtn {
+  color: #fff;
+  -webkit-text-stroke: 1.5px #1f7a2f;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+#shareBtn {
+  color: #fff;
+  -webkit-text-stroke: 1.5px #003c8f;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+#restartBtn {
+  color: #fff;
+  -webkit-text-stroke: 1.5px #1f7a2f;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
