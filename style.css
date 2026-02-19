@@ -41,7 +41,18 @@ h1,h2,h3{
   75%{transform:translate3d(5px,-5px,0);}
   100%{transform:translate3d(0,0,0);}
 }
-header{ padding: 26px 16px 8px; text-align:center; } .badge{ display:inline-flex; gap:10px; align-items:center; padding: 8px 14px; border-radius: 999px; background: #f5899b; color:#fff; box-shadow: var(--shadow); font-weight: 900; letter-spacing:.02em; } .badge small{ font-weight:800; opacity:.9; } 
+header{ padding: 26px 16px 8px; text-align:center; } 
+.badge {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: #2e2e75;
+  font-weight: 900;
+  letter-spacing:.02em;
+  display: inline;
+} 
+.badge small{ font-weight:800; opacity:.9; } 
 h1 {
   font-family: 'Baloo 2', cursive;
   font-weight: 900;
@@ -230,6 +241,7 @@ button:focus-visible, input:focus-visible{
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+
 
 
 
