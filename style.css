@@ -70,7 +70,7 @@ h1 {
 .sub {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 700;
-  font-size: clamp(18px, 3vw, 24px);
+  font-size: clamp(16px, 2.5vw, 20px);
   text-align: center;
   color: #2e6dd1;
   margin-top: 6px;
