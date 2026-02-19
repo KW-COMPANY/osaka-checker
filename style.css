@@ -251,7 +251,7 @@ button:focus-visible, input:focus-visible{
   transition: all 0.3s ease;
 }
 #startBtn.active {
-  background: linear-gradient(90deg, #ff3366, #ffcc33);
+  background: linear-gradient(135deg, #69f591, #e0eb4b);
   color: #fff;
   cursor: pointer;
   transform: scale(1.05);
@@ -265,3 +265,4 @@ button:focus-visible, input:focus-visible{
 #startBtn.attention {
   animation: pop 0.5s ease;
 }
+
