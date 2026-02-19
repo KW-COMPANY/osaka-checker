@@ -46,8 +46,30 @@ gender: null, qIndex: 0, scores: {food:0, comm:0, money:0, local:0, fashion:0, a
 const screenQ = el("screenQ");
 const screenR = el("screenR");
 
- const startBtn = el("startBtn"); const genderMale = el("genderMale"); const genderFemale = el("genderFemale"); const qTitle = el("qTitle"); const qMeta = el("qMeta"); const choices = el("choices"); const qIndexEl = el("qIndex"); const qTotalEl = el("qTotal"); const barFill = el("barFill"); const moodEl = el("mood"); const livePct = el("livePct"); const livePhoto = el("livePhoto"); const resultPct = el("resultPct"); const resultComment = el("resultComment"); const breakdown = el("breakdown"); const shareBtn = el("shareBtn"); const restartBtn = el("restartBtn"); const downloadBtn = el("downloadBtn"); const stageBadge = el("stageBadge"); const photoInput = el("photoInput"); const photoInput2 = el("photoInput2"); const thumb = el("thumb"); const thumb2 = el("thumb2"); const photoScoreVal = el("photoScoreVal"); const photoModeVal = el("photoModeVal");
- const resultImage = el("resultImage");
+ const startBtn = el("startBtn"); 
+const genderMale = el("genderMale");
+const genderFemale = el("genderFemale");
+const qTitle = el("qTitle");
+const qMeta = el("qMeta");
+const choices = el("choices");
+const qIndexEl = el("qIndex");
+const qTotalEl = el("qTotal");
+const barFill = el("barFill");
+const moodEl = el("mood");
+const livePct = el("livePct");
+const livePhoto = el("livePhoto");
+const resultPct = el("resultPct");
+const resultComment = el("resultComment");
+const breakdown = el("breakdown");
+const shareBtn = el("shareBtn");
+const restartBtn = el("restartBtn");
+const stageBadge = el("stageBadge");
+const photoInput = el("photoInput");
+const photoInput2 = el("photoInput2");
+const thumb = el("thumb"); const thumb2 = el("thumb2");
+const photoScoreVal = el("photoScoreVal");
+const photoModeVal = el("photoModeVal");
+const resultImage = el("resultImage");
 
 function initMax(){
  
@@ -237,3 +259,4 @@ document.getElementById("homeTitle").addEventListener("click", () => {
   document.getElementById("screenTop").classList.add("active");
 
 });
+
