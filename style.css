@@ -102,7 +102,7 @@ main{ padding: 16px 16px 44px; display:flex; justify-content:center; } .wrap{
   width:100%; 
   text-align:center;
   border:none;
-  background: linear-gradient(135deg, #e36fb6, #edb340);
+  background: linear-gradient(135deg, #69f591, #e0eb4b);
   border-radius: 24px;
   padding: 16px;
   cursor:pointer; 
@@ -302,3 +302,4 @@ button:active,
   box-shadow: 0 6px 12px rgba(10,31,68,0.35);
 }
 box-shadow: 0 6px 16px rgba(10,31,68,0.25);
+
