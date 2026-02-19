@@ -247,12 +247,17 @@
   display:inline;
 }
 
-/* スマホだけ改行＆小さく */
 @media (max-width:480px){
 
   .sp-line{
     display:block;
-    font-size:0.9em;   /* 少し小さく */
+    font-size:0.9em;
     margin-top:4px;
   }
+
+  .strong{
+    font-weight:900;
+    letter-spacing:0.05em;
+  }
+
 }
