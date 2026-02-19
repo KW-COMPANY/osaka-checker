@@ -116,7 +116,9 @@
 }
  .tag{ display:inline-flex; padding: 6px 10px; border-radius: 999px; font-weight: 1000; font-size: 12px; background: rgba(0,0,0,.08); border:1px solid rgba(0,0,0,.10);
  }
- .tag.hot{ background: rgba(255,0,168,.12); border-color: rgba(255,0,168,.25);
+ .tag.hot{
+  background: rgba(0,0,0,.08);
+  border-color: rgba(0,0,0,.12);
  }
  .choices{ display:grid; gap: 10px; 
 }
@@ -217,3 +219,4 @@
  button:active, #shareBtn:active, #restartBtn:active, #startBtn:active, #maleBtn:active, #femaleBtn:active { box-shadow: 0 6px 12px rgba(10,31,68,0.35);
  }
  box-shadow: 0 6px 16px rgba(10,31,68,0.25);
+
