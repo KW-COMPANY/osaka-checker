@@ -47,7 +47,7 @@ header{ padding: 26px 16px 8px; text-align:center; }
   border-radius: 0;
   background: none;
   box-shadow: none;
-  color: #2e2e75;
+  color: #2e6dd1;
   font-weight: 900;
   letter-spacing:.02em;
   display: inline;
@@ -241,6 +241,7 @@ button:focus-visible, input:focus-visible{
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+
 
 
 
