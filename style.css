@@ -149,8 +149,13 @@ overflow:hidden; background: #7137e6; min-height: 280px; position:relative; box-
 #shareBtn{
   background: #3296d9;
   color:#fcf5f5;
-} .btn:active{ transform: translateY(3px); box-shadow: 0 5px 0 rgba(0,0,0,.12); } .btn.alt{ background: rgba(255,255,255,.8);
-color: #8156d6; border: 2px solid rgba(0,0,0,.14); box-shadow: 0 8px 0 rgba(0,0,0,.08); } .btn.alt:active{ box-shadow: 0 5px 0 rgba(0,0,0,.08); } footer{ text-align:center; padding: 0 16px 22px; opacity:.85; font-weight: 800; font-size: 12px; } 
+} .btn:active{ transform: translateY(3px); box-shadow: 0 5px 0 rgba(0,0,0,.12); } 
+.btn.alt{ 
+ background: rgba(255,255,255,.8);
+color: #8156d6; border: 2px solid rgba(0,0,0,.14);
+ box-shadow: 0 8px 0 rgba(0,0,0,.08); } 
+.btn.alt:active{ box-shadow: 0 5px 0 rgba(0,0,0,.08); } 
+footer{ text-align:center; padding: 0 16px 22px; opacity:.85; font-weight: 800; font-size: 12px; } 
 button:focus-visible, input:focus-visible{
     outline: 2px solid #7137e6; /* or var(--ink) */
     box-shadow: var(--focus);
@@ -176,3 +181,4 @@ button:focus-visible, input:focus-visible{
 #genderFemale.choice {
   background: linear-gradient(135deg, #ff6ec7, #ffbb33);
 }
+
