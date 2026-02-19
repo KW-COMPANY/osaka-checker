@@ -57,15 +57,15 @@ header{ padding: 26px 16px 8px; text-align:center; }
 h1 {
   font-family: 'Baloo 2', cursive;
   font-weight: 900;
-  font-size: clamp(32px, 6vw, 64px);
+  font-size: clamp(36px, 7vw, 64px);
   text-align: center;
   background: linear-gradient(90deg, #4da6ff, #00ccff, #ff6ec7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.02em;
-  margin: 16px auto 8px;
-  line-height: 1.05;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  margin: 8px auto 8px;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
 } 
 .sub {
   font-family: 'Noto Sans JP', sans-serif;
@@ -242,6 +242,7 @@ button:focus-visible, input:focus-visible{
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+
 
 
 
