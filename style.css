@@ -96,7 +96,7 @@ main{ padding: 16px 16px 44px; display:flex; justify-content:center; } .wrap{
   font-weight: 900; 
   line-height:1.2; 
   box-shadow: 0 6px 12px rgba(0,0,0,0.18);
-  color: #ede8e8;
+  color: #fcf5f5;
   font-size: 16px;
   transition: transform .15s ease, box-shadow .15s ease, filter .15s ease; 
 }
@@ -120,7 +120,7 @@ main{ padding: 16px 16px 44px; display:flex; justify-content:center; } .wrap{
   padding: 16px;
   font-weight: 900;
   font-size: 18px;
-  color: #ede8e8;
+  color: #fcf5f5;
   cursor: pointer;
   box-shadow: 0 6px 12px rgba(0,0,0,0.18);
   transition: transform .15s ease, box-shadow .15s ease, filter .15s ease; 
@@ -147,7 +147,7 @@ main{ padding: 16px 16px 44px; display:flex; justify-content:center; } .wrap{
  .pct{ font-size: clamp(44px, 6.2vw, 84px); font-weight: 900; letter-spacing: .01em; margin: 0; text-shadow: 0 4px 0 rgba(0,0,0,.12); } .comment{ margin-top: 8px; font-weight: 900; line-height:1.45; background: rgba(255,255,255,.72); border: 1px solid rgba(0,0,0,.12); padding: 12px; border-radius: 14px; } .avatarStage{ border-radius: 16px; border: 2px solid rgba(0,0,0,.14); 
 overflow:hidden; background: #7137e6; min-height: 280px; position:relative; box-shadow: var(--shadow); } .avatarStage img{ width:100%; height:auto; display:block; } .stageBadge{ position:absolute; top:10px; left:10px; background: rgba(0,0,0,.80); color:#fff; padding: 6px 10px; border-radius: 999px; font-weight: 900; font-size: 12px; border:1px solid rgba(255,255,255,.15); } .breakdown{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; } @media (max-width: 740px){ .breakdown{ grid-template-columns: 1fr; } } .meter{ padding: 12px; border-radius: 14px; background: rgba(255,255,255,.75); border: 1px solid rgba(0,0,0,.12); } .meter .top{ display:flex; justify-content:space-between; gap:10px; align-items:baseline; margin-bottom: 8px; font-weight: 900; } .meter .top .name{ font-size: 13px; } .meter .top .num{ font-variant-numeric: tabular-nums; font-size: 13px; opacity:.9; } .meter .g{ height: 10px; background: rgba(0,0,0,.10); border-radius: 999px; overflow:hidden; } .meter .g > div{ height:100%; width:0%; transition: width .5s ease; } .actions{ display:flex; gap: 10px; flex-wrap:wrap; margin-top: 12px; } #shareBtn{
   background: #3296d9;
-  color:#ede8e8;
+  color:#fcf5f5;
 } .btn:active{ transform: translateY(3px); box-shadow: 0 5px 0 rgba(0,0,0,.12); } .btn.alt{ background: rgba(255,255,255,.8);
 color: #8156d6; border: 2px solid rgba(0,0,0,.14); box-shadow: 0 8px 0 rgba(0,0,0,.08); } .btn.alt:active{ box-shadow: 0 5px 0 rgba(0,0,0,.08); } footer{ text-align:center; padding: 0 16px 22px; opacity:.85; font-weight: 800; font-size: 12px; } 
 button:focus-visible, input:focus-visible{
@@ -163,7 +163,7 @@ button:focus-visible, input:focus-visible{
 .stageBadge{
   background: linear-gradient(135deg, #ff3b3b, #ffec4d);
   animation: shine 3s linear infinite;
-  color:#ede8e8;
+  color:#fcf5f5;
 }
 @keyframes shine{
   0%{background-position:0 0;}
@@ -175,3 +175,4 @@ button:focus-visible, input:focus-visible{
 #genderFemale.choice {
   background: linear-gradient(135deg, #ff6ec7, #ffbb33);
 }
+
