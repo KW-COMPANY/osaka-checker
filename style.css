@@ -219,4 +219,11 @@
  button:active, #shareBtn:active, #restartBtn:active, #startBtn:active, #maleBtn:active, #femaleBtn:active { box-shadow: 0 6px 12px rgba(10,31,68,0.35);
  }
  box-shadow: 0 6px 16px rgba(10,31,68,0.25);
+#homeTitle{
+  cursor:pointer;
+  transition:opacity .2s ease;
+}
 
+#homeTitle:hover{
+  opacity:.8;
+}
