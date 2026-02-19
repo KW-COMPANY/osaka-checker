@@ -266,28 +266,28 @@ button:focus-visible, input:focus-visible{
 }
 #genderMale{
   color: #fff;
-  -webkit-text-stroke: 0.8px rgba(120, 0, 80, 0.6);
+  -webkit-text-stroke: 0.6px rgba(0,0,0,0.4);
   text-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
 #genderFemale {
   color: #fff;
-  -webkit-text-stroke: 0.8px rgba(120, 0, 80, 0.6);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  -webkit-text-stroke: 0.6px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 #startBtn {
   color: #fff;
-  -webkit-text-stroke: 0.8px rgba(20, 90, 40, 0.6);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  -webkit-text-stroke: 0.6px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 #shareBtn {
   color: #fff;
-  -webkit-text-stroke: 0.8px rgba(0, 40, 120, 0.6);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  -webkit-text-stroke: 0.6px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 #restartBtn {
   color: #fff;
-  -webkit-text-stroke: 0.8px rgba(20, 90, 40, 0.6);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  -webkit-text-stroke: 0.6px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 button {
   color: #fff;
