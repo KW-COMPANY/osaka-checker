@@ -228,4 +228,12 @@ restartBtn.addEventListener("click", ()=>{
  downloadBtn.addEventListener("click", ()=>{ const link = document.createElement("a"); link.href = resultImage.src; link.download = `osaka_level${levelFromPct(state.totalPct).level}.jpg`;
 
  link.click(); });
+document.getElementById("homeTitle").addEventListener("click", () => {
 
+  document.querySelectorAll(".screen").forEach(screen => {
+    screen.classList.remove("active");
+  });
+
+  document.getElementById("screenTop").classList.add("active");
+
+});
