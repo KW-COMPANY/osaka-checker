@@ -225,11 +225,8 @@ button:focus-visible, input:focus-visible{
 #genderFemale.choice {
   background: linear-gradient(135deg, #ff6ec7, #ffbb33);
 }
-
-
-
-
-
-
-
-
+#rTitle {
+  color: #ff9900;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
