@@ -227,3 +227,12 @@
 #homeTitle:hover{
   opacity:.8;
 }
+.sp-br{
+  display:none;
+}
+
+@media (max-width: 480px){
+  .sp-br{
+    display:block;
+  }
+}
