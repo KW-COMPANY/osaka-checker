@@ -29,10 +29,10 @@ const LEVEL_IMAGES = {
 {label:"めっちゃあてはまる", hint:"(せやせや！)", value: 4}, {label:"あてはまる", hint:"(まぁまぁ、せやな)", value: 3}, {label:"どっちともいえへん", hint:"(知らんけど)", value: 2}, {label:"あてはまらへん", hint:"(ちゃうちゃう)", value: 1}, {label:"全然あてはまらへん", hint:"(なんの話やねん！)", value: 0}
  ]; 
 const QUESTIONS = [ 
-{genre:"comm", weight:1.2, text:'会話で"オチ"がないと、ソワソワしてまうタイプや？'}, {genre:"comm", weight:1.1, text:"友達の小ボケに、反射でツッコんでまう？(体が先に動く)"}, {genre:"action", weight:1.0, text:"せっかち言われる？信号が青になる0.2秒前に歩き出す？"}, {genre:"fashion", weight:1.2, text:"派手めの服・柄モン・キラキラ、なんやかんや好きや？"}, {genre:"fashion", weight:1.3, text:'ヒョウ柄に"安心感"ある？(落ち着くって何)'}, {genre:"food", weight:1.2, text:"たこ焼き、お好み焼きは外食やなくて家庭料理やと思ってる？"},
- {genre:"food", weight:1.0, text:"ソースの種類にこだわりある？(ウスター？とんかつ？知らんけど)"}, {genre:"food", weight:1.0, text:'串カツの二度づけ禁止を守る時だけ、急に品行方正になる？'}, {genre:"local", weight:1.1, text:"エスカレーター、右側に立つ派や？(急ぐ人のレーン空ける)"}, {genre:"local", weight:1.2, text:"新世界・通天閣・道頓堀のどれか行くと、テンション上がる？"}, {genre:"local", weight:1.0, text:"大阪の地名、地味に言える？(天満/十三/枚方/我孫子…読める？)"}, {genre:"money", weight:1.2, text:'値札見たら、心の中で一回まけてって言うてる？'},
+{genre:"comm", weight:1.2, text:'会話で"オチ"がないと、ソワソワしてまうタイプ？'}, {genre:"comm", weight:1.1, text:"友達の小ボケに、反射でツッコんでまう？(体が先に動く)"}, {genre:"action", weight:1.0, text:"せっかち言われる？信号が青になる0.2秒前に歩き出す？"}, {genre:"fashion", weight:1.2, text:"派手めの服・柄モン・キラキラ、なんやかんや好きやろ？"}, {genre:"fashion", weight:1.3, text:'ヒョウ柄に"安心感"ある？(落ち着くって何)'}, {genre:"food", weight:1.2, text:"たこ焼き、お好み焼きは外食やなくて家庭料理やと思てる？"},
+ {genre:"food", weight:1.0, text:"ソースの種類にこだわりある？(ウスター？とんかつ？知らんけど)"}, {genre:"food", weight:1.0, text:'串カツの二度づけ禁止を守る時だけ、急に品行方正になる？'}, {genre:"local", weight:1.1, text:"エスカレーター、右側に立つ派？(急ぐ人のレーン空ける)"}, {genre:"local", weight:1.2, text:"新世界・通天閣・道頓堀のどれか行くと、テンション上がる？"}, {genre:"local", weight:1.0, text:"大阪の地名、地味に言える？(天満/十三/枚方/我孫子…読める？)"}, {genre:"money", weight:1.2, text:'値札見たら、心の中で一回まけてって言うてる？'},
 {genre:"money", weight:1.1, text:'これ、実質タダって言いがち？(ポイントで相殺理論)'},
- {genre:"money", weight:1.0, text:"セール情報に反応速い？(LINE通知で走る)"}, {genre:"comm", weight:1.0, text:"初対面でも距離詰めるん早い言われる？(もう友達)"}, {genre:"action", weight:1.1, text:"声デカい言われる？普通に喋ってるだけやのに？"}, {genre:"action", weight:1.0, text:"困ってる人見たら、つい世話焼いてまう？(おせっかい最高)"},
+ {genre:"money", weight:1.0, text:"セール情報に反応速い？(LINE通知で走りだす)"}, {genre:"comm", weight:1.0, text:"初対面でも距離詰めるん早い言われる？(もう友達)"}, {genre:"action", weight:1.1, text:"声デカい言われる？普通に喋ってるだけやのに？"}, {genre:"action", weight:1.0, text:"困ってる人見たら、つい世話焼いてまう？(おせっかい最高)"},
  {genre:"local", weight:1.1, text:'東京の人、ちょっと"かしこそう"で緊張する？(こわい言うたら怒る？)'}
  ]; 
 
@@ -271,6 +271,7 @@ document.getElementById("homeTitle").addEventListener("click", () => {
   document.getElementById("screenTop").classList.add("active");
 
 });
+
 
 
 
