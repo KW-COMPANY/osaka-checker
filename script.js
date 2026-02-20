@@ -117,7 +117,7 @@ small.textContent = opt.hint;
 b.appendChild(small);
 
  b.addEventListener("click", ()=>applyAnswer(opt.value)); choices.appendChild(b); }); const p = calcPct(false); moodEl.textContent = moodFromPct(p); livePct.textContent = `${p}%`; livePhoto.textContent = state.photoEnabled ? "ON" : "OFF"; } function applyAnswer(value){ const q = QUESTIONS[state.qIndex]; state.scores[q.genre] += value * q.weight; state.qIndex++; const p = calcPct(false); livePct.textContent = `${p}%`; moodEl.textContent = moodFromPct(p); if(state.qIndex >= QUESTIONS.length){ finish(); }else{ renderQuestion(); } } /********************* * スコア計算 *********************/ const clamp = (n,a,b)=>Math.max(a,Math.min(b,n)); function calcGenrePct(){ const out = {}; for(const g of GENRES){ const max = state.max[g.key] || 1; out[g.key] = Math.round((state.scores[g.key] / max) * 100); } state.genrePct = out; return out; } function calcPct(includePhoto){ const gp = calcGenrePct(); const avg = Math.round((gp.food + gp.comm + gp.money + gp.local + gp.fashion + gp.action)/6); if(includePhoto && state.photoEnabled){ return clamp(Math.round(avg*0.80 + state.photoScore*0.20), 0, 100); } return clamp(avg, 0, 100); } function levelFromPct(p){ return LEVELS.find(l=>p>=l.min && p<=l.max) || LEVELS[LEVELS.length-1]; } function commentFromPct(p){ if(p<=12) return "あんた…大阪の風は感じるけど、まだ\"静かなUSJ\"やな。ツッコミ温存してるやろ？";
- if(p<=25) return "そこそこ大阪っぽいで。大阪城見てええ石垣やな言うタイプや。"; if(p<=38) return "新世界の匂いしてきた。串カツ一本で人生語り始める気配あるで。"; if(p<=50) return "道頓堀のネオンが呼んでる。写真撮る時だけ声量2倍になるタイプや。"; if(p<=63) return "通天閣ゾーン突入や。ヒョウ柄が半径3m以内におる。"; if(p<=75) return "もはやNGK級や！あんたが歩いたら看板が点灯して拍手する！"; if(p<=88) return "コテコテ度達人や！ヒョウ柄とたこ焼きが似合いすぎてヤバい！"; return "極みや！あんたが大阪そのもの！通天閣がお辞儀する！"; }
+ if(p<=25) return "そこそこ大阪っぽいで。大阪城見てええ石垣やな言うタイプや。"; if(p<=38) return "新世界の匂いしてきた。串カツ一本で人生語り始める気配あるで。"; if(p<=50) return "道頓堀のネオンが呼んでる。写真撮る時だけ声量2倍になるタイプや。"; if(p<=63) return "通天閣ゾーン突入や。ヒョウ柄が半径3m以内におるで。"; if(p<=75) return "もはやNGK級や！あんたが歩いただけでみんな笑顔で拍手するで！"; if(p<=88) return "コテコテ度達人や！ヒョウ柄とたこ焼きが似合いすぎてヤバい！"; return "極みや！あんたが大阪そのもの！通天閣がお辞儀する！"; }
 
 async function handlePhoto(file, where){
   if(!file) return;
@@ -271,6 +271,7 @@ document.getElementById("homeTitle").addEventListener("click", () => {
   document.getElementById("screenTop").classList.add("active");
 
 });
+
 
 
 
