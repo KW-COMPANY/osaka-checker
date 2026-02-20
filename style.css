@@ -271,6 +271,7 @@ input[type="file"]{
   padding: 0;
 }
 .pct{
-  color:#ffbf00
+  background: linear-gradient(90deg,#ff00a8,#ffbf00,#00ffd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
