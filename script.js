@@ -215,7 +215,18 @@ photoInput2.addEventListener("change", (e) => handlePhoto(e.target.files?.[0], 2
 let start = 0;
 const target = state.totalPct;
 const interval = setInterval(()=>{
-  if(start >= target){ clearInterval(interval); resultPct.textContent = `${target}%`; return; }
+if(start >= target){
+  clearInterval(interval);
+  resultPct.textContent = `${target}%`;
+
+  resultPct.classList.add("final");
+
+  setTimeout(()=>{
+    resultPct.classList.remove("final");
+  },600);
+
+  return;
+}
   resultPct.textContent = `${start}%`;
   start++;
 }, 12);  
@@ -260,3 +271,4 @@ document.getElementById("homeTitle").addEventListener("click", () => {
   document.getElementById("screenTop").classList.add("active");
 
 });
+
