@@ -26,7 +26,7 @@ const LEVEL_IMAGES = {
  {key:"action", name:"性格行動", c1:"#ffbf00", c2:"#ff3b3b"}
  ];
  const OPTIONS = [ 
-{label:"めっちゃあてはまる", hint:"(せや！それや！)", value: 4}, {label:"あてはまる", hint:"(まぁまぁ、せやな)", value: 3}, {label:"どっちともいえへん", hint:"(知らんけど)", value: 2}, {label:"あてはまらへん", hint:"(ちゃうちゃう)", value: 1}, {label:"全然あてはまらへん", hint:"(なんの話やねん)", value: 0}
+{label:"めっちゃあてはまる", hint:"(せやせや！)", value: 4}, {label:"あてはまる", hint:"(まぁまぁ、せやな)", value: 3}, {label:"どっちともいえへん", hint:"(知らんけど)", value: 2}, {label:"あてはまらへん", hint:"(ちゃうちゃう)", value: 1}, {label:"全然あてはまらへん", hint:"(なんの話やねん！)", value: 0}
  ]; 
 const QUESTIONS = [ 
 {genre:"comm", weight:1.2, text:'会話で"オチ"がないと、ソワソワしてまうタイプや？'}, {genre:"comm", weight:1.1, text:"友達の小ボケに、反射でツッコんでまう？(体が先に動く)"}, {genre:"action", weight:1.0, text:"せっかち言われる？信号が青になる0.2秒前に歩き出す？"}, {genre:"fashion", weight:1.2, text:"派手めの服・柄モン・キラキラ、なんやかんや好きや？"}, {genre:"fashion", weight:1.3, text:'ヒョウ柄に"安心感"ある？(落ち着くって何)'}, {genre:"food", weight:1.2, text:"たこ焼き、お好み焼きは外食やなくて家庭料理やと思ってる？"},
@@ -271,6 +271,7 @@ document.getElementById("homeTitle").addEventListener("click", () => {
   document.getElementById("screenTop").classList.add("active");
 
 });
+
 
 
 
