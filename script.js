@@ -219,11 +219,11 @@ if(start >= target){
   clearInterval(interval);
   resultPct.textContent = `${target}%`;
 
-  resultPct.classList.add("final");
+  resultPct.classList.add("glow");
 
   setTimeout(()=>{
-    resultPct.classList.remove("final");
-  },600);
+    resultPct.classList.remove("glow");
+  },800);
 
   return;
 }
@@ -271,4 +271,5 @@ document.getElementById("homeTitle").addEventListener("click", () => {
   document.getElementById("screenTop").classList.add("active");
 
 });
+
 
