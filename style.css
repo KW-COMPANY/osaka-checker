@@ -285,3 +285,21 @@ input[type="file"]{
 .pct.final{
   animation: popFinal 0.6s ease;
 }
+@keyframes glowFinal{
+  0%{
+    text-shadow: 0 0 0 rgba(255,255,255,0);
+  }
+  40%{
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #ff00a8,
+      0 0 40px #ffbf00;
+  }
+  100%{
+    text-shadow: 0 0 0 rgba(255,255,255,0);
+  }
+}
+
+.pct.glow{
+  animation: glowFinal 0.8s ease;
+}
