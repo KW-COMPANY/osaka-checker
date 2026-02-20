@@ -263,6 +263,6 @@
 }
 @media (max-width:480px){
   input[type="file"]{
-    margin-left: -10px;
+    margin-left: -14px;
   }
 }
