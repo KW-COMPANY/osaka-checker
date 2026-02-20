@@ -271,9 +271,3 @@ document.getElementById("homeTitle").addEventListener("click", () => {
   document.getElementById("screenTop").classList.add("active");
 
 });
-
-
-
-
-
-
